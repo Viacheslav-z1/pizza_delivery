@@ -36,15 +36,22 @@
                     </button>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link"> Про компанію </a>
+                    <a href="#about" class="menu__link"> Про компанію </a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link"> Чому ми? </a>
+                    <a href="#why" class="menu__link"> Чому ми? </a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link"> Контакти </a>
+                    <a href="#contacts" class="menu__link"> Контакти </a>
                   </li>
                 </ul>
+                <button class="menu__basket">
+                  <img
+                    src="images/basket-shopping-solid.svg"
+                    alt=""
+                    class="menu__basket-img"
+                  />
+                </button>
               </nav>
             </div>
           </div>
@@ -59,87 +66,539 @@
                 у нас можна замовити домашні вареники, пельмені, короваї,
                 листове тісто і багато іншого.
               </p>
-              <button class="top__btn btn">Зробити замовлення!</button>
+              <a href="#go" class="top__btn btn">Зробити замовлення!</a>
             </div>
           </div>
         </div>
       </div>
       <main class="main">
-        <section class="tovars">
+        <section id="go" class="tovars">
           <div class="container">
             <div class="tovars__inner">
               <ul class="tovars__list">
-                <li class="tovars__item">
+                <li for="pizza-size-1" class="tovars__item">
                   <div class="tovars__item-box">
-                    <img src="images/logo.png" alt="pizza" class="tovars__img" />
-                    <h3 class="tovars__name">Вареники з картоплею</h3>
+                    <img
+                      src="images/pizza/paperoni.jpg"
+                      alt="pizza"
+                      class="tovars__img"
+                    />
+                    <h3 class="tovars__name tovars__name-1">Піца Папероні</h3>
                     <p class="tovars__price">
-                      <span class="tovars__num"> 130 </span>
-                      <span class="tovars__walet">Грн</span>
-                      <span class="tovars__radius">/30cm</span>
+                      <select
+                        class="tovars__select"
+                        data-price="100"
+                        id="pizza-size-1"
+                        id="radius"
+                        name="radius"
+                      >
+                        <option value="small">Мала (20см)</option>
+                        <option value="medium">Середня (30см)</option>
+                        <option value="large">Велика (40см)</option>
+                      </select>
+                      <input
+                        id="pizza-quantity-1"
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                        class="tovars__count"
+                      />
                     </p>
+                    <ul class="tovars__toppings">
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-1"
+                            value="cheese"
+                            id="pizza-toppings-1"
+                            data-price="10"
+                          />
+                          Сир (+10 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-1"
+                            name="pizza-toppings-1"
+                            value="mushrooms"
+                            data-price="15"
+                          />
+                          Гриби (+15 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-1"
+                            name="pizza-toppings-1"
+                            value="mushrooms"
+                            data-price="12"
+                          />
+                          Овочі (+12 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-1"
+                            value="peppers"
+                            data-price="20"
+                            id="pizza-toppings-1"
+                          />
+                          Перець (+20 грн.)
+                        </label>
+                      </li>
+                    </ul>
+                    <span id="pizza-price-1" class="tovars__num">
+                      119 <span>Грн</span>
+                    </span>
+                    <button class="tovars__btn btn">Додати в кошик!</button>
                   </div>
                 </li>
-                <li class="tovars__item">
+                <li for="pizza-size-2" class="tovars__item">
                   <div class="tovars__item-box">
-                    <img src="images/logo.png" alt="pizza" class="tovars__img" />
-                    <h3 class="tovars__name">Вареники з картоплею</h3>
+                    <img
+                      src="images/pizza/bavarska.jpeg"
+                      alt="pizza"
+                      class="tovars__img"
+                    />
+                    <h3 class="tovars__name tovars__name-2">Піца Баварська</h3>
                     <p class="tovars__price">
-                      <span class="tovars__num"> 130 </span>
-                      <span class="tovars__walet">Грн</span>
-                      <span class="tovars__radius">/30cm</span>
+                      <select
+                        data-price="80"
+                        class="tovars__select"
+                        id="pizza-size-2"
+                        id="radius"
+                        name="radius"
+                      >
+                        <option value="small">Мала (20см)</option>
+                        <option value="medium">Середня (30см)</option>
+                        <option value="large">Велика (40см)</option>
+                      </select>
+                      <input
+                        id="pizza-quantity-2"
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
                     </p>
+                    <ul class="tovars__toppings">
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-2"
+                            value="cheese"
+                            id="pizza-toppings-2"
+                            data-price="10"
+                          />
+                          Сир (+10 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-2"
+                            name="pizza-toppings-2"
+                            value="mushrooms"
+                            data-price="15"
+                          />
+                          Гриби (+15 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-2"
+                            name="pizza-toppings-2"
+                            value="mushrooms"
+                            data-price="12"
+                          />
+                          Овочі (+12 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-2"
+                            value="peppers"
+                            data-price="20"
+                            id="pizza-toppings-2"
+                          />
+                          Перець (+20 грн.)
+                        </label>
+                      </li>
+                    </ul>
+                    <span id="pizza-price-2" class="tovars__num">
+                      119 <span>Грн</span>
+                    </span>
+                    <button class="tovars__btn btn">Додати в кошик!</button>
                   </div>
                 </li>
-                <li class="tovars__item">
+                <li for="pizza-size-3" class="tovars__item">
                   <div class="tovars__item-box">
-                    <img src="images/logo.png" alt="pizza" class="tovars__img" />
-                    <h3 class="tovars__name">Вареники з картоплею</h3>
+                    <img
+                      src="images/pizza/four.jpg"
+                      alt="pizza"
+                      class="tovars__img"
+                    />
+                    <h3 class="tovars__name tovars__name-3">
+                      Піца Чотири сири
+                    </h3>
                     <p class="tovars__price">
-                      <span class="tovars__num"> 130 </span>
-                      <span class="tovars__walet">Грн</span>
-                      <span class="tovars__radius">/30cm</span>
+                      <select
+                        data-price="110"
+                        class="tovars__select"
+                        id="pizza-size-3"
+                        id="radius"
+                        name="radius"
+                      >
+                        <option value="small">Мала (20см)</option>
+                        <option value="medium">Середня (30см)</option>
+                        <option value="large">Велика (40см)</option>
+                      </select>
+                      <input
+                        id="pizza-quantity-3"
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
                     </p>
+                    <ul class="tovars__toppings">
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-3"
+                            value="cheese"
+                            id="pizza-toppings-3"
+                            data-price="10"
+                          />
+                          Сир (+10 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-3"
+                            name="pizza-toppings-3"
+                            value="mushrooms"
+                            data-price="15"
+                          />
+                          Гриби (+15 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-3"
+                            name="pizza-toppings-3"
+                            value="mushrooms"
+                            data-price="12"
+                          />
+                          Овочі (+12 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-3"
+                            value="peppers"
+                            data-price="20"
+                            id="pizza-toppings-3"
+                          />
+                          Перець (+20 грн.)
+                        </label>
+                      </li>
+                    </ul>
+                    <span id="pizza-price-3" class="tovars__num">
+                      119 <span>Грн</span>
+                    </span>
+                    <button class="tovars__btn btn">Додати в кошик!</button>
                   </div>
                 </li>
-                <li class="tovars__item">
+
+                <li for="pizza-size-4" class="tovars__item">
                   <div class="tovars__item-box">
-                    <img src="images/logo.png" alt="pizza" class="tovars__img" />
-                    <h3 class="tovars__name">Вареники з картоплею</h3>
+                    <img
+                      src="images/pizza/gavayska.jpg"
+                      alt="pizza"
+                      class="tovars__img"
+                    />
+                    <h3 class="tovars__name tovars__name-4">Піца Гавайська</h3>
                     <p class="tovars__price">
-                      <span class="tovars__num"> 130 </span>
-                      <span class="tovars__walet">Грн</span>
-                      <span class="tovars__radius">/30cm</span>
+                      <select
+                        data-price="85"
+                        class="tovars__select"
+                        id="pizza-size-4"
+                        id="radius"
+                        name="radius"
+                      >
+                        <option value="small">Мала (20см)</option>
+                        <option value="medium">Середня (30см)</option>
+                        <option value="large">Велика (40см)</option>
+                      </select>
+                      <input
+                        id="pizza-quantity-4"
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
                     </p>
+                    <ul class="tovars__toppings">
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-4"
+                            value="cheese"
+                            id="pizza-toppings-4"
+                            data-price="10"
+                          />
+                          Сир (+10 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-4"
+                            name="pizza-toppings-4"
+                            value="mushrooms"
+                            data-price="15"
+                          />
+                          Гриби (+15 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-4"
+                            name="pizza-toppings-4"
+                            value="mushrooms"
+                            data-price="12"
+                          />
+                          Овочі (+12 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-4"
+                            value="peppers"
+                            data-price="20"
+                            id="pizza-toppings-4"
+                          />
+                          Перець (+20 грн.)
+                        </label>
+                      </li>
+                    </ul>
+                    <span id="pizza-price-4" class="tovars__num">
+                      119 <span>Грн</span>
+                    </span>
+                    <button class="tovars__btn btn">Додати в кошик!</button>
                   </div>
                 </li>
-                <li class="tovars__item">
+
+                <li for="pizza-size-5" class="tovars__item">
                   <div class="tovars__item-box">
-                    <img src="images/logo.png" alt="pizza" class="tovars__img" />
-                    <h3 class="tovars__name">Вареники з картоплею</h3>
+                    <img
+                      src="images/pizza/kalcone.jpg"
+                      alt="pizza"
+                      class="tovars__img"
+                    />
+                    <h3 class="tovars__name tovars__name-5">Піца Кальконе</h3>
                     <p class="tovars__price">
-                      <span class="tovars__num"> 130 </span>
-                      <span class="tovars__walet">Грн</span>
-                      <span class="tovars__radius">/30cm</span>
+                      <select
+                        data-price="90"
+                        class="tovars__select"
+                        id="pizza-size-5"
+                        id="radius"
+                        name="radius"
+                      >
+                        <option value="small">Мала (20см)</option>
+                        <option value="medium">Середня (30см)</option>
+                        <option value="large">Велика (40см)</option>
+                      </select>
+                      <input
+                        id="pizza-quantity-5"
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
                     </p>
+                    <ul class="tovars__toppings">
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-5"
+                            value="cheese"
+                            id="pizza-toppings-5"
+                            data-price="10"
+                          />
+                          Сир (+10 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-5"
+                            name="pizza-toppings-5"
+                            value="mushrooms"
+                            data-price="15"
+                          />
+                          Гриби (+15 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-5"
+                            name="pizza-toppings-5"
+                            value="mushrooms"
+                            data-price="12"
+                          />
+                          Овочі (+12 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-5"
+                            value="peppers"
+                            data-price="20"
+                            id="pizza-toppings-5"
+                          />
+                          Перець (+20 грн.)
+                        </label>
+                      </li>
+                    </ul>
+                    <span id="pizza-price-5" class="tovars__num">
+                      119 <span>Грн</span>
+                    </span>
+                    <button class="tovars__btn btn">Додати в кошик!</button>
                   </div>
                 </li>
-                <li class="tovars__item">
+
+                <li for="pizza-size-6" class="tovars__item">
                   <div class="tovars__item-box">
-                    <img src="images/logo.png" alt="pizza" class="tovars__img" />
-                    <h3 class="tovars__name">Вареники з картоплею</h3>
+                    <img
+                      src="images/pizza/cezar.jpg"
+                      alt="pizza"
+                      class="tovars__img"
+                    />
+                    <h3 class="tovars__name tovars__name-6">Піца Цезар</h3>
                     <p class="tovars__price">
-                      <span class="tovars__num"> 130 </span>
-                      <span class="tovars__walet">Грн</span>
-                      <span class="tovars__radius">/30cm</span>
+                      <select
+                        data-price="130"
+                        class="tovars__select"
+                        id="pizza-size-6"
+                        id="radius"
+                        name="radius"
+                      >
+                        <option value="small">Мала (20см)</option>
+                        <option value="medium">Середня (30см)</option>
+                        <option value="large">Велика (40см)</option>
+                      </select>
+                      <input
+                        id="pizza-quantity-6"
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
                     </p>
+                    <ul class="tovars__toppings">
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-6"
+                            value="cheese"
+                            id="pizza-toppings-6"
+                            data-price="10"
+                          />
+                          Сир (+10 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-6"
+                            name="pizza-toppings-6"
+                            value="mushrooms"
+                            data-price="15"
+                          />
+                          Гриби (+15 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            id="pizza-toppings-6"
+                            name="pizza-toppings-6"
+                            value="mushrooms"
+                            data-price="12"
+                          />
+                          Овочі (+12 грн.)
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="pizza-toppings-6"
+                            value="peppers"
+                            data-price="20"
+                            id="pizza-toppings-6"
+                          />
+                          Перець (+20 грн.)
+                        </label>
+                      </li>
+                    </ul>
+                    <span id="pizza-price-6" class="tovars__num">
+                      119 <span>Грн</span>
+                    </span>
+                    <button class="tovars__btn ovars__btn btn">
+                      Додати в кошик!
+                    </button>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-        <section class="about">
+        <section id="about" class="about">
           <div class="container">
             <div class="about__inner">
               <div class="about__box">
@@ -156,15 +615,128 @@
             </div>
           </div>
         </section>
+
+        <section id="why" class="why">
+          <div class="container">
+            <div class="why__inner">
+              <h3 class="why__title">Чому наша мережа?</h3>
+              <ul class="why__list">
+                <li class="why__item">
+                  <img src="./images/make.jpg" alt="img" class="why__img" />
+                  <h3 class="why__name">Професіонали</h3>
+                  <p class="why__descr">
+                    Ми за якісні кадри и поважаемо працю наших працівників. Вони
+                    стараються над вашими стравами. А ми стараємся спростити їм
+                    цю задачу.
+                  </p>
+                </li>
+                <li class="why__item">
+                  <img src="./images/nice.jpg" alt="img" class="why__img" />
+                  <h3 class="why__name">Якість</h3>
+                  <p class="why__descr">
+                    Це найважливіше в нашій роботі. Тільки з якісних продуктів
+                    можуть вийти такі шедеври, якими ми полюбляємо частувати
+                    вас.
+                  </p>
+                </li>
+                <li class="why__item">
+                  <img src="./images/study.jpg" alt="img" class="why__img" />
+                  <h3 class="why__name">Навчання</h3>
+                  <p class="why__descr">
+                    Наші робітники постійно навчаються і розвиваються. Що
+                    дозволяє нам дивувати вас новинках кожен місяць.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer class="footer"></footer>
+
+      <footer id="contacts" class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <a href="index.html" class="logo-box">
+              <img src="./images/logo.png" alt="logo" class="logo__img" />
+            </a>
+            <nav class="footer__menu">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#about" class="footer__link"> – Про компанію </a>
+                </li>
+                <li class="footer__item">
+                  <a href="#why" class="footer__link"> – Чому ми? </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__info-box">
+              <div class="footer__place">м. Вінниця</div>
+              <p class="footer__days">
+                Пн - Пт. 09:00 - 21:00 <br />
+                Сб - Нд. 10:00 - 22:00
+              </p>
+              <p class="footer__number">
+                <a href="tel:0999999999" class="footer__number-link"
+                  >(099) 999-99-99</a
+                >
+              </p>
+            </div>
+          </div>
+          <p class="footer__text">© Працюємо з 2021 року</p>
+        </div>
+      </footer>
     </div>
 
-   
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <div class="basket">
+      <div class="basket__inner">
+        <button class="basket__close">
+          <span class="basket__btn-line"></span>
+          <span class="basket__btn-line basket__btn-line-2"></span>
+        </button>
+        <h3 class="basket__title">Корзина</h3>
+        <ul class="basket__list">
+          У вас ще немає замовлень, додайте вашу піцу:)
+        </ul>
+        <p class="basket__total__price">0 Грн</p>
+
+        <button class="basket__openForm btn">Замовити</button>
+      </div>
+    </div>
+
+    <form class="form">
+      <div class="container">
+        <div class="form__inner">
+          <button class="form__close">
+            <span class="form__btn-line"></span>
+            <span class="form__btn-line form__btn-line-2"></span>
+          </button>
+          <h3 class="form__title">Замовлення</h3>
+          <p class="form__descr">Введіть ваше ім'я</p>
+          <input
+            placeholder="Ім'я"
+            type="text"
+            class="form__input form__name"
+          />
+
+          <p class="form__descr">Введіть вашу адресу (Повну)</p>
+          <input
+            placeholder="Адреса"
+            type="text"
+            class="form__input form__name"
+          />
+
+          <p class="form__descr">Введіть ваш номер телефону</p>
+          <input
+            placeholder="+380"
+            type="number"
+            class="form__input form__name"
+          />
+
+          <button class="form__btn btn">Замовити</button>
+        </div>
+      </div>
+    </form>
+
     <script src="js/main.min.js"></script>
-
-
-    </script>
   </body>
 </html>

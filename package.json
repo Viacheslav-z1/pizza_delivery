@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "del": "^6.0.0",
-    "slick-carousel": "^1.8.1"
+    "node-telegram-bot-api": "^0.61.0",
+    "slick-carousel": "^1.8.1",
+    "telegraf": "^4.12.2"
   }
 }
